@@ -1,22 +1,13 @@
 <h1>Songs</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Artist Name - Song Title</th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @songs.each do |song| %>
-      <tr>
-        <td><%= link_to "<%song.artist_name%> - <%song.title%>", song_path(song)%> </td>
-        <td>
-          <%= link_to 'View', song %> |
-          <%= link_to 'Edit', edit_song_path(song) %> |
-          <%= link_to "Delete", song, method: :delete %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <a href="<%= song_path(song) %>">
+        <%= song.artist_name %>
+        -
+        <%= song.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
