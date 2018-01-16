@@ -5,3 +5,22 @@
   <li> <%= link_to s.title, song_path(s)%></li>
   <%end%>
  <%end%>
+
+ <h1>Artists</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Song_count</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr>
+        <td><%= artist.name %></td>
+        <td><%= link_to s.title, song_path(s)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
