@@ -19,7 +19,7 @@
     <% @artists.each do |artist| %>
       <tr>
         <td><%= artist.name %></td>
-        <td><%= link_to s.title, song_path(s)%></td>
+        <td><%=pluralize(artist.songs.count, 'Song')%></td>
       </tr>
     <% end %>
   </tbody>
