@@ -15,7 +15,7 @@
         <td><%= artist.name %></td>
         <td><%=pluralize(artist.songs.count, 'Song')%></td>
         <td>
-          <%= link_to 'View', song %> |
+          <%= link_to 'View', artist %> |
           <%= link_to 'Edit', edit_artist_path(artist) %> |
           <%= link_to "Delete", artist, method: :delete %>
         </td>
