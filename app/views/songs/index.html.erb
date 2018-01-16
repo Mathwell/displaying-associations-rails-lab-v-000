@@ -2,8 +2,7 @@
 <table>
   <thead>
     <tr>
-      <th>Artist Name</th>
-      <th>Song Title</th>
+      <th>Artist Name - Song Title</th>
       <th></th>
     </tr>
   </thead>
@@ -11,8 +10,7 @@
   <tbody>
     <% @songs.each do |song| %>
       <tr>
-        <td><%= song.artist_name %></td>
-        <td><%= song.title %></td>
+        <td><%= song.artist_name %> - <%= song.title %></td>
         <td>
           <%= link_to 'View', song %> |
           <%= link_to 'Edit', edit_song_path(song) %> |
